@@ -12,8 +12,18 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                'green-10': '#092A27',
+                'green-20': '#12544F',
+                'green-30': '#1B7E76',
+                'green-35': '#20958B',
+                'green-50': '#2DD2C5',
+                'green-70': '#81E4DC',
+                'green-90': '#D5F6F3'
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                poppins: ['Poppins'],
             },
         },
     },
