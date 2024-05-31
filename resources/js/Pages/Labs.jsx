@@ -1,40 +1,42 @@
-import React from 'react';
-import Button from '@/Components/Button';
+import React from "react";
+import Button from "@/Components/Button";
+import NavBar from "@/Components/NavBar";
 import CardLayanan from '@/Components/CardLayanan';
 
 const Labs = () => {
     return (
         <>
-            <h1>Ini halaman testing komponen, section, dan page</h1>
-            <ButtonComponent />
-            <CardLayananComponent />
+                <NavBarComponent />
+                <h1>Ini halaman testing komponen, section, dan page</h1>
+                <ButtonComponent />
+                <CardLayananComponent />
         </>
-    )
-}
+    );
+};
 
-function ButtonComponent () {
+function ButtonComponent() {
     const dataButton = [
         {
             text: "Masuk",
-            theme: "primary"
-        }, 
+            theme: "primary",
+        },
         {
             text: "Kontak",
-            theme: "secondary"
+            theme: "secondary",
         },
         {
             text: "Hapus",
-            theme: "tertiary"
-        }
+            theme: "tertiary",
+        },
     ];
-    
-      return (
+
+    return (
         <>
-            <Button text={dataButton[0].text} theme={dataButton[0].theme} /> 
-            <Button text={dataButton[1].text} theme={dataButton[1].theme} /> 
-            <Button text={dataButton[1].text} theme={dataButton[2].theme} /> 
-        </> 
-      );
+            <Button text={dataButton[0].text} theme={dataButton[0].theme} />
+            <Button text={dataButton[1].text} theme={dataButton[1].theme} />
+            <Button text={dataButton[1].text} theme={dataButton[2].theme} />
+        </>
+    );
 }
 
 function CardLayananComponent () {
@@ -76,4 +78,12 @@ function CardLayananComponent () {
     )
 }
 
-export default Labs
+function NavBarComponent() {
+    return (
+        <>
+            <NavBar />
+        </>
+    );
+}
+
+export default Labs;
