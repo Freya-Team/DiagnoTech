@@ -19,6 +19,7 @@ export default {
                 'green-35': '#20958B',
                 'green-50': '#2DD2C5',
                 'green-70': '#81E4DC',
+                'green-80': '#ABEDE8',
                 'green-90': '#D5F6F3'
             },
             fontFamily: {
