@@ -16,22 +16,22 @@ const NavBar = ( ) => {
                             className="w-full h-full"
                         />
                     </div>
-                    <h1 className={`text-[24px] font-bold `}>
+                    <h1 className={`text-[24px] font-bold text-black font-poppins `}>
                         Diagno<span className="text-green-50">Tech</span>
                     </h1>
                 </div>
                 {/* mid  */}
                 <div className="">
-                    <a href="" className="mx-[25px]">
+                    <a href="" className="mx-[25px] text-black font-poppins">
                         Beranda
                     </a>
-                    <a href="" className="mx-[25px]">
+                    <a href="" className="mx-[25px] text-black font-poppins">
                         Tentang Kami
                     </a>
-                    <a href="" className="mx-[25px]">
+                    <a href="" className="mx-[25px] text-black font-poppins">
                         Deteksi
                     </a>
-                    <a href="" className="mx-[25px]">
+                    <a href="" className="mx-[25px] text-black font-poppins">
                         Blog
                     </a>
                 </div>

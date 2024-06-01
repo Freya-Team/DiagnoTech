@@ -4,15 +4,21 @@ import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
 import CardLayanan from "@/Components/CardLayanan";
 import RekomendasiObat from "@/Components/RekomendasiObat";
+import StepDetection from "@/Components/StepDetection";
+import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
 
 const Labs = () => {
     return (
-        <div className="">
+        <div className="bg-gray-50">
             <NavBarComponent />
-            <h1 className="font-bold text-center text-3xl text-white mb-20">HALAMAN TESTING</h1>
+            <h1 className="font-bold text-center text-3xl  mb-20 font-poppins text-black">
+                HALAMAN TESTING
+            </h1>
             <ButtonComponent />
             <CardLayananComponent />
             <RekomendasiObatComponent />
+            <StepDetectionComponent />
+            <AccordionRekomendasiComponent />
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -166,6 +172,34 @@ function RekomendasiObatComponent() {
         },
     ];
     return <RekomendasiObat medicines={medicines} />;
+}
+
+function StepDetectionComponent() {
+    return <StepDetection />;
+}
+
+function AccordionRekomendasiComponent() {
+    let penyembuhans = [
+        {
+            id: 1,
+            title: "title 1",
+            content: "content 1",
+        },
+        {
+            id: 2,
+            title: "title 2",
+            content: "content 2",
+        },
+        {
+            id: 3,
+            title: "title 3",
+            content: "content 3",
+        },
+    ];
+    return (
+        <AccordionRekomendasi penyembuhans={penyembuhans} />
+    )
+  
 }
 
 export default Labs;
