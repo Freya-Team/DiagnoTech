@@ -17,7 +17,7 @@ const NavBar = ( ) => {
                         />
                     </div>
                     <h1 className={`text-[24px] font-bold `}>
-                        Diagno <span className="text-blue-500">Tech</span>
+                        Diagno<span className="text-green-50">Tech</span>
                     </h1>
                 </div>
                 {/* mid  */}
