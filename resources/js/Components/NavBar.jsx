@@ -6,7 +6,7 @@ const NavBar = ( ) => {
 
     return (
         <Fragment>
-            <section className=" py-3 w-full h-full px-[90px] mt-[20px] flex items-center justify-between">
+            <section className=" py-3 w-full px-[90px] pt-[20px] flex items-center justify-between">
                 {/* left */}
                 <div className="flex gap-2 items-center">
                     <div className="w-[45px] h-[45px] rounded-full bg-red-300 overflow-hidden">

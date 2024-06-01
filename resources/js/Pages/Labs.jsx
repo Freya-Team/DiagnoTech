@@ -1,16 +1,20 @@
 import React from "react";
 import Button from "@/Components/Button";
 import NavBar from "@/Components/NavBar";
+import Footer from "@/Components/Footer";
 import CardLayanan from '@/Components/CardLayanan';
+
 
 const Labs = () => {
     return (
-        <>
-                <NavBarComponent />
-                <h1>Ini halaman testing komponen, section, dan page</h1>
-                <ButtonComponent />
-                <CardLayananComponent />
-        </>
+        <div className="">
+            <NavBarComponent />
+            <h1>Ini halaman testing komponen, section, dan page</h1>
+            <ButtonComponent />
+            <CardLayananComponent />
+            <div className="h-80"></div>
+            <FooterComponent />
+        </div>
     );
 };
 
@@ -82,6 +86,14 @@ function NavBarComponent() {
     return (
         <>
             <NavBar />
+        </>
+    );
+}
+
+function FooterComponent() {
+    return (
+        <>
+            <Footer />
         </>
     );
 }
