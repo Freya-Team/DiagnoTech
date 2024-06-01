@@ -18,6 +18,7 @@ export default {
                 'green-30': '#1B7E76',
                 'green-35': '#20958B',
                 'green-50': '#2DD2C5',
+                'green-55': '#42D7CB',
                 'green-70': '#81E4DC',
                 'green-90': '#D5F6F3'
             },
