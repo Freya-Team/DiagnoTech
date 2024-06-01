@@ -1,32 +1,6 @@
 import React from "react";
 
-const Footer = () => {
-    const texts = [
-        "Development of COVID-19 Vaccine Research",
-        "Salad for Healthy and Fun Diet to Loose Weight",
-        "Development of COVID-19 Vaccine Research",
-        "Salad for Healthy and Fun Diet to Loose Weight",
-    ];
-
-    const sosmeds = [
-        {
-            image: "https://img.icons8.com/?size=100&id=32309&format=png&color=ffffff",
-            text: "@diagnotech.id",
-        },
-        {
-            image: "https://img.icons8.com/?size=100&id=118467&format=png&color=ffffff",
-            text: "diagnotech",
-        },
-        {
-            image: "https://img.icons8.com/?size=100&id=16733&format=png&color=ffffff",
-            text: "+62-8570-0072-350",
-        },
-        {
-            image: "https://img.icons8.com/?size=100&id=lUktdBVdL4Kb&format=png&color=ffffff",
-            text: "diagnotech",
-        },
-    ];
-
+const Footer = ({ texts, sosmeds }) => {
     return (
         <>
             <footer className="bg-green-30 py-[34px]">
@@ -83,8 +57,8 @@ const Footer = () => {
                         <h1 className="font-bold font-poppins text-[24px] text-white mb-[20px]">
                             Social Media
                         </h1>
-                        {sosmeds.map((sosmed) => (
-                            <div className="w-full  flex mb-[25px]">
+                        {sosmeds.map((sosmed, index) => (
+                            <div key={index} className="w-full  flex mb-[25px]">
                                 <div className="w-[35px] h-[35px]  mr-[16px]">
                                     <img
                                         src={sosmed.image}
