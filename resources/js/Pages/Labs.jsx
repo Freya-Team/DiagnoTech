@@ -6,6 +6,8 @@ import CardLayanan from "@/Components/CardLayanan";
 import RekomendasiObat from "@/Components/RekomendasiObat";
 import StepDetection from "@/Components/StepDetection";
 import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
+import CardPenyakit from "@/Components/CardPenyakit";
+import CardPreview from "@/Components/CardPreview";
 
 const Labs = () => {
     return (
@@ -19,6 +21,8 @@ const Labs = () => {
             <RekomendasiObatComponent />
             <StepDetectionComponent />
             <AccordionRekomendasiComponent />
+            <CardPreviewComponent />
+            <CardPenyakitComponent />
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -196,10 +200,39 @@ function AccordionRekomendasiComponent() {
             content: "content 3",
         },
     ];
+    return <AccordionRekomendasi penyembuhans={penyembuhans} />;
+}
+
+function CardPenyakitComponent() {
+    let content = "Skin Disease";
+    const listsDiseases = [
+       {
+        "title" : "Agne Disease",
+        "image" : "https://picsum.photos/seed/picsum/200/300"
+       },
+       {
+        "title" : "Agne ayey ",
+        "image" : "https://picsum.photos/seed/picsum/200/300"
+       },
+       
+    ];
     return (
-        <AccordionRekomendasi penyembuhans={penyembuhans} />
+        <>
+            <section className=" mx-auto flex w-[80%] flex-wrap justify-between">
+                <CardPenyakit content={content} listsDiseases={listsDiseases} />
+            </section>
+        </>
+    );
+}
+
+function CardPreviewComponent () {
+    const image = "https://picsum.photos/seed/picsum/200/300"
+    const title = "Preview"
+    return (
+        <>
+        <CardPreview image={image} title={title}  />
+        </>
     )
-  
 }
 
 export default Labs;
