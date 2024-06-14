@@ -6,6 +6,7 @@ import CardLayanan from "@/Components/CardLayanan";
 import RekomendasiObat from "@/Components/RekomendasiObat";
 import StepDetection from "@/Components/StepDetection";
 import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
+import ColumnInput from "@/Components/ColumnInput";
 
 const Labs = () => {
     return (
@@ -19,6 +20,7 @@ const Labs = () => {
             <RekomendasiObatComponent />
             <StepDetectionComponent />
             <AccordionRekomendasiComponent />
+            <ColumnInputComponent />
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -196,10 +198,28 @@ function AccordionRekomendasiComponent() {
             content: "content 3",
         },
     ];
+    return <AccordionRekomendasi penyembuhans={penyembuhans} />;
+}
+
+function ColumnInputComponent() {
+    let columns = [
+        {
+            id: 1,
+            placeholder: "Your name",
+            label: "name",
+        },
+    ];
     return (
-        <AccordionRekomendasi penyembuhans={penyembuhans} />
-    )
-  
+        <>
+            {columns.map((column) => (
+                <ColumnInput
+                    id={column.id}
+                    label={column.label}
+                    placeholder={column.placeholder}
+                />
+            ))}
+        </>
+    );
 }
 
 export default Labs;
