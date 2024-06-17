@@ -23,7 +23,7 @@ const CardBlog = ({ title, text, theme, image }) => {
                     <p className={theme == 'cardCorousel' ? 'inline' : 'hidden'}>{text}</p>
                     <a href="/blog/{slug}" className="text-[#1B7E76]">Read More</a>
                 </div>
-            </div >
+            </div>
         </>
     )
 };

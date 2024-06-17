@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@/Components/Button";
 import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
-import CardLayanan from "@/Components/CardLayanan";
+import CardPackage from "@/Components/CardLayanan";
 import RekomendasiObat from "@/Components/RekomendasiObat";
 import StepDetection from "@/Components/StepDetection";
 import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
@@ -110,7 +110,7 @@ function CardLayananComponent() {
     return (
         <div className="flex gap-[39px] justify-center items-center">
             {dataLayanan.map((data) => (
-                <CardLayanan
+                <CardPackage
                     title={data.title}
                     list={data.list}
                     price={data.price}

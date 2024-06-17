@@ -1,7 +1,7 @@
 import React from "react"
 import Button from "./Button"
 
-const CardLayanan = ({title, list, price, icons, theme}) => {
+const CardPackage = ({title, list, price, icons, theme}) => {
 
     let bgClass;
     if(theme == 'primary') {
@@ -29,4 +29,4 @@ const CardLayanan = ({title, list, price, icons, theme}) => {
     )
 }
 
-export default CardLayanan
+export default CardPackage
