@@ -2,13 +2,14 @@ import React from "react";
 import Button from "@/Components/Button";
 import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
-import CardPackage from "@/Components/CardLayanan";
+import CardPackage from "@/Components/CardPackage";
 import RekomendasiObat from "@/Components/RekomendasiObat";
 import StepDetection from "@/Components/StepDetection";
 import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
 import ColumnInput from "@/Components/ColumnInput";
 import CardTeamProfile from "@/Components/CardTeamProfile";
 import CardBlog from "@/Components/CardBlog";
+import Journey from "@/Components/Journey";
 
 const Labs = () => {
     return (
@@ -17,6 +18,7 @@ const Labs = () => {
             <h1 className="font-bold text-center text-3xl  mb-20 font-poppins text-black">
                 HALAMAN TESTING
             </h1>
+            <JourneyComponent />
             <CardBlogComponent />
             <ButtonComponent />
             <CardLayananComponent />
@@ -48,11 +50,11 @@ function ButtonComponent() {
     ];
 
     return (
-        <>
+        <div className="flex gap-3 justify-center items-center">
             <Button text={dataButton[0].text} theme={dataButton[0].theme} />
             <Button text={dataButton[1].text} theme={dataButton[1].theme} />
             <Button text={dataButton[1].text} theme={dataButton[2].theme} />
-        </>
+        </div>
     );
 }
 
@@ -245,6 +247,33 @@ function CardTeamComponents() {
                 <CardTeamProfile name='Mohamad Fajar' job='Security' image='images/team-profile3.png' />
             </div>
         </>
+    )
+}
+
+function JourneyComponent () {
+    let journey = [
+        {
+            id: 1,
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            image: "images/grayBg.jpg",
+        },
+        {
+            id: 2,
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            image: "images/grayBg.jpg",
+        },
+        {
+            id: 3,
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            image: "images/grayBg.jpg",
+        },
+    ]
+    return (
+        <div className="flex flex-col gap-2.5">
+            <Journey id={journey[0].id} text={journey[0].text} image={journey[0].image} />
+            <Journey id={journey[1].id} text={journey[1].text} image={journey[1].image} />
+            <Journey id={journey[2].id} text={journey[2].text} image={journey[2].image} />
+        </div>
     )
 }
 
