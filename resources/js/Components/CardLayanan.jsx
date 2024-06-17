@@ -13,7 +13,7 @@ const CardLayanan = ({title, list, price, icons, theme}) => {
     console.log(list, icons)
 
     return (
-        <div className={`py-10 px-[30px] w-max rounded-[30px] flex flex-col items-center gap-[22px] text-black font-poppins border-solid border-[1px] border-green-50 ${bgClass}`} >
+        <div className={`py-10 px-[30px] w-max rounded-[30px] flex flex-col items-center gap-[22px] text-black font-poppins border-solid border-[1px] border-green-50 ${bgClass} hover:drop-shadow-2xl`} >
             <p className='text-2xl font-semibold'>{title}</p>
             <div>
                 {list.map((data, index) => (

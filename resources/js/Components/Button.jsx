@@ -16,13 +16,13 @@ const Button = ({text, theme}) => {
         textClass = 'text-white text-base font-poppins'
     }
     else if (theme == 'tertiary') {
-        bgClass = 'bg-transparent'
+        bgClass = 'bg-white'
         borderClass = 'border-solid border-[1px] border-green-50'
         textClass = 'text-green-50 text-base font-poppins'
     }
 
     return (
-        <button className={`py-3 px-4 m-2 rounded-full shadow-lg ${bgClass} ${borderClass} ${textClass}`}>
+        <button className={`py-3 px-4 m-2 rounded-full hover:drop-shadow-lg hover:text-medium ${bgClass} ${borderClass} ${textClass}`}>
             {text}
         </button>
     )

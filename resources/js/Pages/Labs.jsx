@@ -6,7 +6,8 @@ import CardLayanan from "@/Components/CardLayanan";
 import RekomendasiObat from "@/Components/RekomendasiObat";
 import StepDetection from "@/Components/StepDetection";
 import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
-import CardBlog from "@/Components/CardBlog";
+import ColumnInput from "@/Components/ColumnInput";
+import CardTeamProfile from "@/Components/CardTeamProfile";
 
 const Labs = () => {
     return (
@@ -21,6 +22,8 @@ const Labs = () => {
             <RekomendasiObatComponent />
             <StepDetectionComponent />
             <AccordionRekomendasiComponent />
+            <ColumnInputComponent />
+            <CardTeamComponents />
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -104,7 +107,7 @@ function CardLayananComponent() {
         },
     ];
     return (
-        <div className="flex gap-[39px]">
+        <div className="flex gap-[39px] justify-center items-center">
             {dataLayanan.map((data) => (
                 <CardLayanan
                     title={data.title}
@@ -207,10 +210,41 @@ function AccordionRekomendasiComponent() {
             content: "content 3",
         },
     ];
-    return (
-        <AccordionRekomendasi penyembuhans={penyembuhans} />
-    )
+    return <AccordionRekomendasi penyembuhans={penyembuhans} />;
+}
 
+function ColumnInputComponent() {
+    let columns = [
+        {
+            id: 1,
+            placeholder: "Your name",
+            label: "name",
+        },
+    ];
+    return (
+        <>
+            {columns.map((column) => (
+                <ColumnInput
+                    id={column.id}
+                    label={column.label}
+                    placeholder={column.placeholder}
+                />
+            ))}
+        </>
+    );
+}
+
+function CardTeamComponents () {
+    return (
+        <>
+            <p className="font-poppins font-bold text-4xl text-black text-center mb-[50px]">Tim DiagnoTech</p>
+            <div className="flex gap-[100px] justify-center items-center">
+                <CardTeamProfile name='Reiki Aziz' job='CEO of DiagnoTech' image='images/team-profile.png' />
+                <CardTeamProfile name='Ahmad Aziz' job='Cheerleader' image='images/team-profile2.png' />
+                <CardTeamProfile name='Mohamad Fajar' job='Security' image='images/team-profile3.png' />
+            </div>
+        </>
+    )
 }
 
 export default Labs;
