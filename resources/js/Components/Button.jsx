@@ -22,7 +22,7 @@ const Button = ({text, theme}) => {
     }
 
     return (
-        <button className={`py-3 px-4 m-2 rounded-full hover:drop-shadow-lg hover:text-medium ${bgClass} ${borderClass} ${textClass}`}>
+        <button className={`py-3 px-4 rounded-full hover:drop-shadow-lg hover:text-medium ${bgClass} ${borderClass} ${textClass}`}>
             {text}
         </button>
     )
