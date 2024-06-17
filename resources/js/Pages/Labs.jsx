@@ -8,6 +8,7 @@ import StepDetection from "@/Components/StepDetection";
 import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
 import ColumnInput from "@/Components/ColumnInput";
 import CardTeamProfile from "@/Components/CardTeamProfile";
+import CardBlog from "@/Components/CardBlog";
 
 const Labs = () => {
     return (
@@ -56,10 +57,10 @@ function ButtonComponent() {
 }
 
 function CardBlogComponent() {
-    
+
     return (
         <>
-            <CardBlog   />
+            <CardBlog />
         </>
     )
 }
@@ -234,7 +235,7 @@ function ColumnInputComponent() {
     );
 }
 
-function CardTeamComponents () {
+function CardTeamComponents() {
     return (
         <>
             <p className="font-poppins font-bold text-4xl text-black text-center mb-[50px]">Tim DiagnoTech</p>
