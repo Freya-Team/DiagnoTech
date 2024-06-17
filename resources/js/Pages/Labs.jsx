@@ -8,6 +8,7 @@ import StepDetection from "@/Components/StepDetection";
 import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
 import ColumnInput from "@/Components/ColumnInput";
 import CardTeamProfile from "@/Components/CardTeamProfile";
+import CardBlog from "@/Components/CardBlog";
 
 const Labs = () => {
     return (
@@ -16,6 +17,7 @@ const Labs = () => {
             <h1 className="font-bold text-center text-3xl  mb-20 font-poppins text-black">
                 HALAMAN TESTING
             </h1>
+            <CardBlogComponent />
             <ButtonComponent />
             <CardLayananComponent />
             <RekomendasiObatComponent />
@@ -52,6 +54,15 @@ function ButtonComponent() {
             <Button text={dataButton[1].text} theme={dataButton[2].theme} />
         </>
     );
+}
+
+function CardBlogComponent() {
+
+    return (
+        <>
+            <CardBlog />
+        </>
+    )
 }
 
 function CardLayananComponent() {
@@ -224,7 +235,7 @@ function ColumnInputComponent() {
     );
 }
 
-function CardTeamComponents () {
+function CardTeamComponents() {
     return (
         <>
             <p className="font-poppins font-bold text-4xl text-black text-center mb-[50px]">Tim DiagnoTech</p>
