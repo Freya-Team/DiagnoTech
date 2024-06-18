@@ -14,6 +14,7 @@ import CardPenyakit from "@/Components/CardPenyakit";
 import CardPreview from "@/Components/CardPreview";
 import ColumnInputNEJ from "@/Components/ColumnInputNEJ";
 import ColumnInputPesan from "@/Components/ColumnInputPesan";
+import Corousel from "@/Components/Corousel";
 
 const Labs = () => {
     return (
@@ -22,6 +23,7 @@ const Labs = () => {
             <div className="mt-16">
                 <h1 className="font-poppins font-bold text-4xl text-black text-center">Halaman Testing</h1>
             </div>
+            <CorouselComponent />
             <JourneyComponent />
             <CardBlogComponent />
             <ButtonComponent />
@@ -35,12 +37,22 @@ const Labs = () => {
             <ColumnInputPesanComponent />
             <ColumnInputComponent />
             <CardTeamComponents />
-            
+
             <div className="h-80"></div>
             <FooterComponent />
         </div>
     );
 };
+
+function CorouselComponent() {
+    return (
+        <>
+            <Corousel />
+        </>
+    )
+}
+
+
 
 function ButtonComponent() {
     const dataButton = [
