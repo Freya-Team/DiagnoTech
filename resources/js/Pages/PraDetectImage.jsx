@@ -21,7 +21,7 @@ const PraDetectImage = () => {
     return (
         <>
             <section className="bg-white">
-                <NavBar />
+                <NavBar theme={"primary"} />
                 <div className="w-[80%] mx-auto">
                     <div className="h-[40px]"></div>
                     <h1 className="font-bold text-3xl text-center text-black">

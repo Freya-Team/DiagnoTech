@@ -141,7 +141,6 @@ function NavBarComponent() {
     );
 }
 
-// Di dalam komponen Labs
 function FooterComponent() {
     const texts = [
         "Development of COVID-19 Vaccine Research",
