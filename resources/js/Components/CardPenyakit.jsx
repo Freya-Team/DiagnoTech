@@ -4,7 +4,7 @@ const CardPenyakit = ({ listsDiseases, content }) => {
     return (
         <>
             {listsDiseases.map((disease) => (
-                <section className="w-[250px] h-[250px]  rounded-3xl overflow-hidden relative mb-[20px]">
+                <section className="w-[250px] h-[250px]  rounded-3xl overflow-hidden relative mb-[20px] hover:drop-shadow-xl">
                     <img
                         src={disease.image}
                         alt=""
