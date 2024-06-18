@@ -35,7 +35,7 @@ const NavBar = ( ) => {
                         Blog
                     </a>
                 </div>
-                <div>
+                <div className="flex gap-[15px]">
                     <Button text="Kontak Kami" theme="secondary" />
                     <Button text={"Masuk"} theme="primary" />
                 </div>

@@ -2,10 +2,14 @@ import React from "react";
 import Button from "@/Components/Button";
 import NavBar from "@/Components/NavBar";
 import Footer from "@/Components/Footer";
-import CardLayanan from "@/Components/CardLayanan";
+import CardPackage from "@/Components/CardPackage";
 import RekomendasiObat from "@/Components/RekomendasiObat";
 import StepDetection from "@/Components/StepDetection";
 import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
+import ColumnInput from "@/Components/ColumnInput";
+import CardTeamProfile from "@/Components/CardTeamProfile";
+import CardBlog from "@/Components/CardBlog";
+import Journey from "@/Components/Journey";
 import CardPenyakit from "@/Components/CardPenyakit";
 import CardPreview from "@/Components/CardPreview";
 import ColumnInputNEJ from "@/Components/ColumnInputNEJ";
@@ -18,6 +22,8 @@ const Labs = () => {
             <h1 className="font-bold text-center text-3xl  mb-20 font-poppins text-black">
                 HALAMAN TESTING
             </h1>
+            <JourneyComponent />
+            <CardBlogComponent />
             <ButtonComponent />
             <CardLayananComponent />
             <RekomendasiObatComponent />
@@ -27,6 +33,9 @@ const Labs = () => {
             <CardPenyakitComponent />
             <ColumnInputNEJComponent />
             <ColumnInputPesanComponent />
+            <ColumnInputComponent />
+            <CardTeamComponents />
+            
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -50,12 +59,21 @@ function ButtonComponent() {
     ];
 
     return (
-        <>
+        <div className="flex gap-3 justify-center items-center">
             <Button text={dataButton[0].text} theme={dataButton[0].theme} />
             <Button text={dataButton[1].text} theme={dataButton[1].theme} />
             <Button text={dataButton[1].text} theme={dataButton[2].theme} />
-        </>
+        </div>
     );
+}
+
+function CardBlogComponent() {
+
+    return (
+        <>
+            <CardBlog />
+        </>
+    )
 }
 
 function CardLayananComponent() {
@@ -101,9 +119,9 @@ function CardLayananComponent() {
         },
     ];
     return (
-        <div className="flex gap-[39px]">
+        <div className="flex gap-[39px] justify-center items-center">
             {dataLayanan.map((data) => (
-                <CardLayanan
+                <CardPackage
                     title={data.title}
                     list={data.list}
                     price={data.price}
@@ -206,7 +224,6 @@ function AccordionRekomendasiComponent() {
     ];
     return <AccordionRekomendasi penyembuhans={penyembuhans} />;
 }
-
 function CardPenyakitComponent() {
     let content = "Skin Disease";
     const listsDiseases = [
@@ -215,15 +232,36 @@ function CardPenyakitComponent() {
             image: "https://picsum.photos/seed/picsum/200/300",
         },
         {
-            title: "Agne ayey ",
+            title: "Agne ayey",
             image: "https://picsum.photos/seed/picsum/200/300",
         },
     ];
     return (
         <>
-            <section className=" mx-auto flex w-[80%] flex-wrap justify-between">
+            <section className="mx-auto flex w-[80%] flex-wrap justify-between">
                 <CardPenyakit content={content} listsDiseases={listsDiseases} />
             </section>
+        </>
+    );
+}
+
+function ColumnInputComponent() {
+    let columns = [
+        {
+            id: 1,
+            placeholder: "Your name",
+            label: "name",
+        },
+    ];
+    return (
+        <>
+            {columns.map((column) => (
+                <ColumnInput
+                    id={column.id}
+                    label={column.label}
+                    placeholder={column.placeholder}
+                />
+            ))}
         </>
     );
 }
@@ -253,21 +291,64 @@ function ColumnInputNEJComponent() {
     ];
     return (
         <>
+            {NEJ.map((item) => (
                 <ColumnInputNEJ
-                    id={NEJ[0].id}
-                    label={NEJ[0].label}
-                    placeholder={NEJ[0].placeholder}
+                    id={item.id}
+                    label={item.label}
+                    placeholder={item.placeholder}
                 />
+            ))}
         </>
     );
 }
 
-function ColumnInputPesanComponent () {
+function ColumnInputPesanComponent() {
     return (
         <>
-        <ColumnInputPesan />
+            <ColumnInputPesan />
         </>
-    )
+    );
 }
+
+function CardTeamComponents() {
+    return (
+        <>
+            <p className="font-poppins font-bold text-4xl text-black text-center mb-[50px]">Tim DiagnoTech</p>
+            <div className="flex gap-[100px] justify-center items-center">
+                <CardTeamProfile name='Reiki Aziz' job='CEO of DiagnoTech' image='images/team-profile.png' />
+                <CardTeamProfile name='Ahmad Aziz' job='Cheerleader' image='images/team-profile2.png' />
+                <CardTeamProfile name='Mohamad Fajar' job='Security' image='images/team-profile3.png' />
+            </div>
+        </>
+    );
+}
+
+function JourneyComponent() {
+    let journey = [
+        {
+            id: 1,
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+            image: "images/grayBg.jpg",
+        },
+        {
+            id: 2,
+            text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+            image: "images/grayBg.jpg",
+        },
+        {
+            id: 3,
+            text: "It has survived not only five centuries, but also the leap into electronic typesetting...",
+            image: "images/grayBg.jpg",
+        },
+    ];
+    return (
+        <div className="flex flex-col gap-2.5">
+            {journey.map((item) => (
+                <Journey id={item.id} text={item.text} image={item.image} />
+            ))}
+        </div>
+    );
+}
+
 
 export default Labs;
