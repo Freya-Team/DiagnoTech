@@ -10,6 +10,10 @@ import ColumnInput from "@/Components/ColumnInput";
 import CardTeamProfile from "@/Components/CardTeamProfile";
 import CardBlog from "@/Components/CardBlog";
 import Journey from "@/Components/Journey";
+import CardPenyakit from "@/Components/CardPenyakit";
+import CardPreview from "@/Components/CardPreview";
+import ColumnInputNEJ from "@/Components/ColumnInputNEJ";
+import ColumnInputPesan from "@/Components/ColumnInputPesan";
 
 const Labs = () => {
     return (
@@ -25,8 +29,13 @@ const Labs = () => {
             <RekomendasiObatComponent />
             <StepDetectionComponent />
             <AccordionRekomendasiComponent />
+            <CardPreviewComponent />
+            <CardPenyakitComponent />
+            <ColumnInputNEJComponent />
+            <ColumnInputPesanComponent />
             <ColumnInputComponent />
             <CardTeamComponents />
+            
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -215,6 +224,26 @@ function AccordionRekomendasiComponent() {
     ];
     return <AccordionRekomendasi penyembuhans={penyembuhans} />;
 }
+function CardPenyakitComponent() {
+    let content = "Skin Disease";
+    const listsDiseases = [
+        {
+            title: "Agne Disease",
+            image: "https://picsum.photos/seed/picsum/200/300",
+        },
+        {
+            title: "Agne ayey",
+            image: "https://picsum.photos/seed/picsum/200/300",
+        },
+    ];
+    return (
+        <>
+            <section className="mx-auto flex w-[80%] flex-wrap justify-between">
+                <CardPenyakit content={content} listsDiseases={listsDiseases} />
+            </section>
+        </>
+    );
+}
 
 function ColumnInputComponent() {
     let columns = [
@@ -237,6 +266,50 @@ function ColumnInputComponent() {
     );
 }
 
+function CardPreviewComponent() {
+    const image = "https://picsum.photos/seed/picsum/200/300";
+    const title = "Preview";
+    return (
+        <>
+            <CardPreview image={image} title={title} />
+        </>
+    );
+}
+
+function ColumnInputNEJComponent() {
+    const NEJ = [
+        {
+            id: 1,
+            label: "Name",
+            placeholder: "Reiki Aziz Yoga",
+        },
+        {
+            id: 2,
+            label: "Email",
+            placeholder: "Reiki@gmail.com",
+        },
+    ];
+    return (
+        <>
+            {NEJ.map((item) => (
+                <ColumnInputNEJ
+                    id={item.id}
+                    label={item.label}
+                    placeholder={item.placeholder}
+                />
+            ))}
+        </>
+    );
+}
+
+function ColumnInputPesanComponent() {
+    return (
+        <>
+            <ColumnInputPesan />
+        </>
+    );
+}
+
 function CardTeamComponents() {
     return (
         <>
@@ -247,34 +320,35 @@ function CardTeamComponents() {
                 <CardTeamProfile name='Mohamad Fajar' job='Security' image='images/team-profile3.png' />
             </div>
         </>
-    )
+    );
 }
 
-function JourneyComponent () {
+function JourneyComponent() {
     let journey = [
         {
             id: 1,
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
             image: "images/grayBg.jpg",
         },
         {
             id: 2,
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
             image: "images/grayBg.jpg",
         },
         {
             id: 3,
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+            text: "It has survived not only five centuries, but also the leap into electronic typesetting...",
             image: "images/grayBg.jpg",
         },
-    ]
+    ];
     return (
         <div className="flex flex-col gap-2.5">
-            <Journey id={journey[0].id} text={journey[0].text} image={journey[0].image} />
-            <Journey id={journey[1].id} text={journey[1].text} image={journey[1].image} />
-            <Journey id={journey[2].id} text={journey[2].text} image={journey[2].image} />
+            {journey.map((item) => (
+                <Journey id={item.id} text={item.text} image={item.image} />
+            ))}
         </div>
-    )
+    );
 }
+
 
 export default Labs;
