@@ -27,6 +27,9 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 poppins: ['Poppins'],
             },
+            backgroundImage: {
+                'custom-image': "url('images/hero-image.jpg')",
+            }
         },
     },
 
