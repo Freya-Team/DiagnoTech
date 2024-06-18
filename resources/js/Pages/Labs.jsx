@@ -8,6 +8,8 @@ import StepDetection from "@/Components/StepDetection";
 import AccordionRekomendasi from "@/Components/AccordionRekomendasi";
 import CardPenyakit from "@/Components/CardPenyakit";
 import CardPreview from "@/Components/CardPreview";
+import ColumnInputNEJ from "@/Components/ColumnInputNEJ";
+import ColumnInputPesan from "@/Components/ColumnInputPesan";
 
 const Labs = () => {
     return (
@@ -23,6 +25,8 @@ const Labs = () => {
             <AccordionRekomendasiComponent />
             <CardPreviewComponent />
             <CardPenyakitComponent />
+            <ColumnInputNEJComponent />
+            <ColumnInputPesanComponent />
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -206,15 +210,14 @@ function AccordionRekomendasiComponent() {
 function CardPenyakitComponent() {
     let content = "Skin Disease";
     const listsDiseases = [
-       {
-        "title" : "Agne Disease",
-        "image" : "https://picsum.photos/seed/picsum/200/300"
-       },
-       {
-        "title" : "Agne ayey ",
-        "image" : "https://picsum.photos/seed/picsum/200/300"
-       },
-       
+        {
+            title: "Agne Disease",
+            image: "https://picsum.photos/seed/picsum/200/300",
+        },
+        {
+            title: "Agne ayey ",
+            image: "https://picsum.photos/seed/picsum/200/300",
+        },
     ];
     return (
         <>
@@ -225,12 +228,44 @@ function CardPenyakitComponent() {
     );
 }
 
-function CardPreviewComponent () {
-    const image = "https://picsum.photos/seed/picsum/200/300"
-    const title = "Preview"
+function CardPreviewComponent() {
+    const image = "https://picsum.photos/seed/picsum/200/300";
+    const title = "Preview";
     return (
         <>
-        <CardPreview image={image} title={title}  />
+            <CardPreview image={image} title={title} />
+        </>
+    );
+}
+
+function ColumnInputNEJComponent() {
+    const NEJ = [
+        {
+            id: 1,
+            label: "Name",
+            placeholder: "Reiki Aziz Yoga",
+        },
+        {
+            id: 2,
+            label: "Email",
+            placeholder: "Reiki@gmail.com",
+        },
+    ];
+    return (
+        <>
+                <ColumnInputNEJ
+                    id={NEJ[0].id}
+                    label={NEJ[0].label}
+                    placeholder={NEJ[0].placeholder}
+                />
+        </>
+    );
+}
+
+function ColumnInputPesanComponent () {
+    return (
+        <>
+        <ColumnInputPesan />
         </>
     )
 }
