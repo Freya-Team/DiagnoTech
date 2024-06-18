@@ -16,7 +16,7 @@ const Journey = ({id, text, image}) => {
         if (id%2==0) {
             return (
                 <div className='journey-text w-[490px] text-center'>
-                    <p className='text-black text-base'>{text}</p>
+                    <p className='text-black text-base font-poppins'>{text}</p>
                 </div>
             )
         } 
@@ -40,7 +40,7 @@ const Journey = ({id, text, image}) => {
         else {
             return (
                 <div className='journey-text w-[490px] text-center'>
-                    <p className='text-black text-base'>{text}</p>
+                    <p className='text-black text-base font-poppins'>{text}</p>
                 </div>
             )
         }

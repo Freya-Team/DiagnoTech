@@ -15,9 +15,9 @@ const Labs = () => {
     return (
         <div className="bg-gray-50">
             <NavBarComponent />
-            <h1 className="font-bold text-center text-3xl  mb-20 font-poppins text-black">
-                HALAMAN TESTING
-            </h1>
+            <div className="mt-16">
+                <h1 className="font-poppins font-bold text-4xl text-black text-center">Halaman Testing</h1>
+            </div>
             <JourneyComponent />
             <CardBlogComponent />
             <ButtonComponent />
@@ -127,7 +127,7 @@ function CardLayananComponent() {
 function NavBarComponent() {
     return (
         <>
-            <NavBar />
+            <NavBar theme="primary" />
         </>
     );
 }

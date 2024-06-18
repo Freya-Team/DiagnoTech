@@ -31,10 +31,7 @@ const Footer = ({ texts, sosmeds }) => {
                         </div>
                         <div className=" w-[70%]  ">
                             <h1 className="text-justify text-white font-poppins ">
-                                Lorem idhf jdshf dhf fdihfiudhfdhfu dihduidh f
-                                fdfd f idhfudfdf dhf d fgdfgdfdgdfydgfydgfyydy
-                                dafsuf dfidfiudfu iudfhudhfuihdiu duhiufa s
-                                daiofhdsahfhfads difhidhfudhfudhfudfdsf
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, voluptatem esse? Blanditiis dignissimos sequi natus ad tenetur obcaecati quidem quibusdam, repellendus, eligendi voluptas vitae. Maxime perferendis possimus amet sapiente perspiciatis.
                             </h1>
                         </div>
                     </section>
