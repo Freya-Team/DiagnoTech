@@ -23,7 +23,7 @@ const About = () => {
 function HeroComponent () {
     return (
         <div className='bg-custom-image bg-cover bg-center mb-[26px] '>
-            <div className='w-screen h-screen bg-gradient-to-b from-green-20 via-green-50 to-white opacity-70'>
+            <div className='w-full h-screen bg-gradient-to-b from-green-20 via-green-50 to-white opacity-70'>
             </div>
             <div className='flex flex-col gap-[22px] justify-center items-center absolute inset-0 '>
                 <p className='font-poppins font-semibold text-[56px] text-white text-center'>DiagnoTech</p>
