@@ -21,7 +21,8 @@ export default {
                 'green-55': '#42D7CB',
                 'green-70': '#81E4DC',
                 'green-80': '#ABEDE8',
-                'green-90': '#D5F6F3'
+                'green-90': '#D5F6F3',
+                'grayColumnContactus' : '#F3F1F9'
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
