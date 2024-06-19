@@ -15,7 +15,7 @@ Fully detect accurate
 ## Authors
 
 - [@reikiazizyogautama](https://www.github.com/rhyssh)
-- [@fajarnurkhasani](https://www.github.com/octokatherine)
+- [@fajarnurkhasani](https://www.github.com/mhmdfjr)
 - [@ahmadazizfauzi](https://www.github.com/ahmadazizfauzi)
 
 
@@ -52,7 +52,7 @@ Fully detect accurate
 #### Running
 
 ```http
-  php artisan server
+  php artisan serve
 ```
 
 
