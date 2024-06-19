@@ -1,9 +1,18 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DateController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+
+
+Route::get('/reiki', function () {
+    return view('reiki');
+});
+
+Route::post('/calculate', [DateController::class, 'calculate'])->name('calculate');
+
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -38,7 +47,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/employee', function() {
+Route::get('/employee', function () {
     return Inertia::render('Employee/Employee');
 })->name('employee');
 
@@ -48,4 +57,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

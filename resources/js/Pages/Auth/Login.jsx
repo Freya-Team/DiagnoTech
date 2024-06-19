@@ -33,7 +33,7 @@ export default function Login({ status, canResetPassword }) {
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
 
             <form onSubmit={submit}>
-                <div>
+                <div className='flex flex-col '>
                     <InputLabel htmlFor="email" value="Email" />
 
                     <TextInput
@@ -64,9 +64,10 @@ export default function Login({ status, canResetPassword }) {
                     />
 
                     <InputError message={errors.password} className="mt-2" />
+
                 </div>
 
-                <div className="block mt-4">
+                <div className="flex mt-4 justify-between  ">
                     <label className="flex items-center">
                         <Checkbox
                             name="remember"
@@ -75,17 +76,20 @@ export default function Login({ status, canResetPassword }) {
                         />
                         <span className="ms-2 text-sm text-gray-600">Remember me</span>
                     </label>
+                    <div className='flex flex-col items-end'>
+                        {canResetPassword && (
+                            <Link
+                                href={route('password.request')}
+                                className="text-sm  text-[#20948B] hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            >
+                                Lupa Password ?
+                            </Link>
+                        )}
+                    </div>
                 </div>
 
                 <div className="flex items-center justify-end mt-4">
-                    {canResetPassword && (
-                        <Link
-                            href={route('password.request')}
-                            className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
+
 
                     <PrimaryButton className="ms-4" disabled={processing}>
                         Log in

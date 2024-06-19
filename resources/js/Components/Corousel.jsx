@@ -13,7 +13,7 @@ const Corousel = () => {
     };
     return (
         <>
-            <div className="carousel carousel-center  p-4 ml-[20rem] space-x-4 bg-neutral rounded-box relative">
+            <div className="carousel carousel-center  p-4 ml-[20rem] space-x-4  rounded-box relative">
                 <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href={`#slide${index}`} onClick={handlePrev}
                         className={`btn btn-circle ${index === 1 ? 'hidden' : 'inline-flex'}`}>

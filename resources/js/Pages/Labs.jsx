@@ -15,6 +15,7 @@ import CardPreview from "@/Components/CardPreview";
 import ColumnInputNEJ from "@/Components/ColumnInputNEJ";
 import ColumnInputPesan from "@/Components/ColumnInputPesan";
 import MiniCardBlog from "@/Components/MiniCardBlog";
+import Corousel from "@/Components/Corousel";
 
 const Labs = () => {
     return (
@@ -38,7 +39,7 @@ const Labs = () => {
             <ColumnInputComponent />
             <CardTeamComponents />
             <MiniCardBlogComponent />
-            
+
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -362,7 +363,7 @@ function JourneyComponent() {
     );
 }
 
-function MiniCardBlogComponent () {
+function MiniCardBlogComponent() {
     return <MiniCardBlog />
 }
 

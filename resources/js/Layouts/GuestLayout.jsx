@@ -1,4 +1,4 @@
-import { Link } from '@inertiajs/react';
+import Button from "@/Components/Button";
 
 export default function Guest({ children }) {
     return (
@@ -8,13 +8,17 @@ export default function Guest({ children }) {
             <div className='flex flex-col gap-5 mt-[5rem]'>
                 <div className='flex flex-row items-center gap-4'>
                     <img src="/icons/diagnotech.svg" alt="" />
-                    <h3 className='text-5xl  font-[1000] font-poppins'>Diagno<span className='text-[#2DD2C5]'>Tech</span></h3>
+                    <h3 className='text-5xl font-[1000] font-poppins'>Diagno<span className='text-[#2DD2C5]'>Tech</span></h3>
                 </div>
                 <p className='pr-20 font-semibold'>Kami membantu anda mendeteksi <br /> penyakit melalui gambar menggunakan teknologi Deep <br /> Learning.</p>
-                <a href={route('labs')} className='btn'>Kembali </a>
+                <a href="" className="w-30 text-base cursor-pointer">
+                    <Button text="Kembali ke Beranda" theme="primary" />
+                </a>
             </div>
 
             <div className="w-full  sm:max-w-md mt-[5rem] px-6 py-4 bg-white/30  backdrop-blur-sm shadow-md overflow-hidden sm:rounded-lg">
+                <h1 className="text-2xl font-extrabold  text-center ">Selamat Datang</h1>
+                <p className="text-center ">Masuk untuk identifikasi penyakit anda</p>
                 {children}
             </div>
         </div>
