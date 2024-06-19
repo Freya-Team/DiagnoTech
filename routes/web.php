@@ -22,6 +22,10 @@ Route::get('/about', function () {
     return Inertia::render('About');
 });
 
+Route::get('/prime', function () {
+    return Inertia::render('Prime');
+});
+
 Route::get('/detect-numeric', function () {
     return Inertia::render('DetectNumeric');
 });
