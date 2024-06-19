@@ -15,13 +15,16 @@ import CardPreview from "@/Components/CardPreview";
 import ColumnInputNEJ from "@/Components/ColumnInputNEJ";
 import ColumnInputPesan from "@/Components/ColumnInputPesan";
 import MiniCardBlog from "@/Components/MiniCardBlog";
+import { useState } from "react";
 
 const Labs = () => {
     return (
         <div className="bg-gray-50">
             <NavBarComponent />
             <div className="mt-16">
-                <h1 className="font-poppins font-bold text-4xl text-black text-center">Halaman Testing</h1>
+                <h1 className="font-poppins font-bold text-4xl text-black text-center">
+                    Halaman Testing
+                </h1>
             </div>
             <CorouselComponent />
             <JourneyComponent />
@@ -38,7 +41,10 @@ const Labs = () => {
             <ColumnInputComponent />
             <CardTeamComponents />
             <MiniCardBlogComponent />
-            
+
+            <Kabisat />
+
+
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -81,12 +87,11 @@ function ButtonComponent() {
 }
 
 function CardBlogComponent() {
-
     return (
         <>
             <CardBlog />
         </>
-    )
+    );
 }
 
 function CardLayananComponent() {
@@ -325,11 +330,25 @@ function ColumnInputPesanComponent() {
 function CardTeamComponents() {
     return (
         <>
-            <p className="font-poppins font-bold text-4xl text-black text-center mb-[50px]">Tim DiagnoTech</p>
+            <p className="font-poppins font-bold text-4xl text-black text-center mb-[50px]">
+                Tim DiagnoTech
+            </p>
             <div className="flex gap-[100px] justify-center items-center">
-                <CardTeamProfile name='Reiki Aziz' job='CEO of DiagnoTech' image='images/team-profile.png' />
-                <CardTeamProfile name='Ahmad Aziz' job='Cheerleader' image='images/team-profile2.png' />
-                <CardTeamProfile name='Mohamad Fajar' job='Security' image='images/team-profile3.png' />
+                <CardTeamProfile
+                    name="Reiki Aziz"
+                    job="CEO of DiagnoTech"
+                    image="images/team-profile.png"
+                />
+                <CardTeamProfile
+                    name="Ahmad Aziz"
+                    job="Cheerleader"
+                    image="images/team-profile2.png"
+                />
+                <CardTeamProfile
+                    name="Mohamad Fajar"
+                    job="Security"
+                    image="images/team-profile3.png"
+                />
             </div>
         </>
     );
@@ -362,8 +381,59 @@ function JourneyComponent() {
     );
 }
 
-function MiniCardBlogComponent () {
-    return <MiniCardBlog />
+function MiniCardBlogComponent() {
+    return <MiniCardBlog />;
 }
 
 export default Labs;
+
+function Kabisat() {
+    const [startYear, setStartYear] = useState('');
+    const [endYear, setEndYear] = useState('');
+    const [leapYears, setLeapYears] = useState([]);
+  
+    const handleLeapYearCheck = () => {
+      let years = [];
+      for (let year = parseInt(startYear); year <= parseInt(endYear); year++) {
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+          years.push(year);
+        }
+      }
+      setLeapYears(years);
+    };
+  
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1 className="text-black">Tahun kabisat</h1>
+          <input
+            type="number"
+            value={startYear}
+            onChange={e => setStartYear(e.target.value)}
+            className="text-black"
+            placeholder="Tahun awal"
+          />
+          <input
+          className="text-black"
+            type="number"
+            value={endYear}
+            onChange={e => setEndYear(e.target.value)}
+            placeholder="Tahun akhir"
+          />
+          <br />
+          <button onClick={handleLeapYearCheck} className="bg-blue-500 p-2 text-white hover:opacity-50">Check Leap Years</button>
+          {leapYears.length > 0 && (
+            <div>
+              <h2 className="text-black">Tahun kabisat antara {startYear} dan {endYear} : </h2>
+              <ul>
+                {leapYears.map(year => (
+                  <li key={year} className="text-black">- {year}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </header>
+      </div>
+    );
+  }
+  
