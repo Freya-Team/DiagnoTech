@@ -23,6 +23,7 @@ const Labs = () => {
             <div className="mt-16">
                 <h1 className="font-poppins font-bold text-4xl text-black text-center">Halaman Testing</h1>
             </div>
+            <CorouselComponent />
             <JourneyComponent />
             <CardBlogComponent />
             <ButtonComponent />
@@ -43,6 +44,16 @@ const Labs = () => {
         </div>
     );
 };
+
+function CorouselComponent() {
+    return (
+        <>
+            <Corousel />
+        </>
+    )
+}
+
+
 
 function ButtonComponent() {
     const dataButton = [
