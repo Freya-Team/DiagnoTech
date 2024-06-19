@@ -42,7 +42,9 @@ const Labs = () => {
             <CardTeamComponents />
             <MiniCardBlogComponent />
 
+
             <Kabisat />
+
 
 
             <div className="h-80"></div>
@@ -382,6 +384,7 @@ function JourneyComponent() {
 }
 
 function MiniCardBlogComponent() {
+    return <MiniCardBlog />
     return <MiniCardBlog />;
 }
 
