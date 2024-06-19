@@ -14,7 +14,7 @@ import CardPenyakit from "@/Components/CardPenyakit";
 import CardPreview from "@/Components/CardPreview";
 import ColumnInputNEJ from "@/Components/ColumnInputNEJ";
 import ColumnInputPesan from "@/Components/ColumnInputPesan";
-import Corousel from "@/Components/Corousel";
+import MiniCardBlog from "@/Components/MiniCardBlog";
 
 const Labs = () => {
     return (
@@ -37,7 +37,8 @@ const Labs = () => {
             <ColumnInputPesanComponent />
             <ColumnInputComponent />
             <CardTeamComponents />
-
+            <MiniCardBlogComponent />
+            
             <div className="h-80"></div>
             <FooterComponent />
         </div>
@@ -361,5 +362,8 @@ function JourneyComponent() {
     );
 }
 
+function MiniCardBlogComponent () {
+    return <MiniCardBlog />
+}
 
 export default Labs;

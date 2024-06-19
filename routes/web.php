@@ -22,6 +22,10 @@ Route::get('/about', function () {
     return Inertia::render('About');
 });
 
+Route::get('/detect-numeric', function () {
+    return Inertia::render('DetectNumeric');
+});
+
 Route::get('/pradetectimage', function () {
     return Inertia::render('PraDetectImage');
 });
