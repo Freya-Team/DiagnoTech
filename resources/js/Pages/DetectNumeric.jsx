@@ -4,6 +4,7 @@ import NavBar from '@/Components/NavBar'
 import Footer from '@/Components/Footer'
 import ColumnInput from '@/Components/ColumnInput'
 import Button from "@/Components/Button";
+import CardPenyakit from "@/Components/CardPenyakit";
 
 const DetectNumeric = () => {
     const [selected, setSelected] = useState("Medium")
@@ -48,6 +49,12 @@ const DetectNumeric = () => {
                     <ButtonComponent />
                 </div>
             </div>
+        </div>
+        <div className='list-disease flex flex-col gap-5 mt-[50px]'>
+            <p className="font-poppins font-bold text-4xl text-black text-center">Daftar Penyakit</p>
+            <p className='font-poppins font-normal text-2xl text-black text-center mb-10'>Penyakit yang telah dipelajari oleh deep learning DiagnoTech</p>
+            <CardPenyakitComponent />
+            <CardPenyakitComponent />
         </div>
         <FooterComponent />
     </div>
@@ -102,6 +109,35 @@ function ButtonComponent() {
             <Button text={dataButton[0].text} theme={dataButton[0].theme} />
             <Button text={dataButton[1].text} theme={dataButton[1].theme} />
         </div>
+    );
+}
+
+function CardPenyakitComponent() {
+    let content = "Skin Disease";
+    const listsDiseases = [
+        {
+            title: "Agne Disease",
+            image: "https://picsum.photos/seed/picsum/200/300",
+        },
+        {
+            title: "Agne Ayey",
+            image: "https://picsum.photos/seed/picsum/200/300",
+        },
+        {
+            title: "Agne Disease",
+            image: "https://picsum.photos/seed/picsum/200/300",
+        },
+        {
+            title: "Agne Ayey",
+            image: "https://picsum.photos/seed/picsum/200/300",
+        },
+    ];
+    return (
+        <>
+            <section className="flex flex-wrap justify-center items-center gap-5">
+                <CardPenyakit content={content} listsDiseases={listsDiseases} />
+            </section>
+        </>
     );
 }
 
