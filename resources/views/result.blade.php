@@ -11,6 +11,6 @@
             <li>{{ $day }}</li>
         @endforeach
     </ul>
-    <a href="{{ url('/input') }}">Kembali</a>
+    <a href="{{ url('/reiki') }}">Kembali</a>
 </body>
 </html>
